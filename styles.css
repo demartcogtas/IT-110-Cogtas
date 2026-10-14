@@ -1,0 +1,241 @@
+
+/*
+REFLECTION QUESTIONS
+
+1. Why did one of your two conflicting rules win?
+
+The #about selector wins over the .card selector
+because an ID selector has higher specificity than
+a class selector. Although both rules target the
+same element, the ID selector takes priority.
+
+2. What is the rendered width if box-sizing were
+content-box instead of border-box?
+
+The total width would be 544px. The calculation is
+500px content width + 40px horizontal padding
+(20px on each side) + 4px borders
+(2px on each side) = 544px.
+
+3. When would you choose visibility: hidden
+instead of display: none?
+
+I would use visibility: hidden when I want to hide
+an element but keep its space in the layout.
+I would use display: none when I want to hide the
+element and remove its space completely.
+*/
+
+
+/* =================================
+   1. CSS RESET
+   ================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =================================
+   2. BASIC PAGE STYLING
+   ================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+    border-top: 4px solid steelblue;
+}
+
+h1,
+h2 {
+    color: navy;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   3. HEADER AND NAVIGATION
+   ================================= */
+
+header {
+    background-color: #dbeafe;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 12px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #1e40af;
+}
+
+
+/* =================================
+   4. PROFILE CARDS AND BOX MODEL
+   ================================= */
+
+/*
+The total rendered width of a card is 500px.
+With border-box, the width includes content,
+horizontal padding, and borders.
+*/
+
+.card {
+    width: 500px;
+    max-width: 100%;
+    padding: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    background-color: white;
+    margin: 0 auto 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #444444;
+}
+
+/* Descendant selector */
+.card p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+/* Class selector */
+.intro {
+    color: #2563eb;
+    background-color: #f8fafc;
+    font-weight: bold;
+}
+
+/* =================================
+   5. CSS CASCADE AND ABOUT CARD
+   ================================= */
+
+/*
+#about wins over .card because an ID selector
+has higher specificity than a class selector.
+*/
+
+#about {
+    color: #1e3a8a;
+    border-color: #2563eb;
+    position: relative;
+}
+
+/* Badge positioned in the top-right corner */
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   6. PSEUDO-ELEMENT
+   ================================= */
+
+.intro::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dc2626;
+}
+
+
+/* =================================
+   7. SKILLS LIST
+   ================================= */
+
+.skills-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.skills-list > li {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: 1px solid rgb(147, 197, 253);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/* =================================
+   8. DISPLAY AND VISIBILITY
+   ================================= */
+
+/* Removes the paragraph and its space */
+.hide-none {
+    display: none;
+}
+
+/* Hides the paragraph but keeps its space */
+.hide-visibility {
+    visibility: hidden;
+}
+
+/*
+Difference:
+display: none removes the element from the layout.
+visibility: hidden preserves the element's space.
+*/
+
+
+/* =================================
+   9. SCROLLING HOBBIES BOX
+   ================================= */
+
+.scroll-box {
+    height: 180px;
+    overflow: auto;
+}
+
+
+/* =================================
+   10. PAGE LAYOUT AND FOOTER
+   ================================= */
+
+main {
+    padding: 1px 20px;
+}
+
+footer {
+    background-color: #dbeafe;
+    padding: 15px;
+    text-align: center;
+    color: navy;
+}
