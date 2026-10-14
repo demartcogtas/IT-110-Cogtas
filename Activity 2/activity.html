@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practical Application Activity</title>
+</head>
+
+<body>
+
+    <h1>HTML Practical Application Activity</h1>
+
+
+    <!-- ==================== IMAGES ==================== -->
+    <h2 id="images">1. Images</h2>
+
+    <p>Here are the images I included in my activity.</p>
+
+    <img src="images/cutie.jpg" alt="Cute image" width="300">
+
+    <br><br>
+
+    <img src="images/jong.jpg" alt="Jong image" width="300">
+
+    <br><br>
+
+    <figure>
+        <img src="images/mosh.jpg" alt="Mosh image" width="300">
+        <figcaption>This is my third image.</figcaption>
+    </figure>
+
+
+    <!-- ==================== HYPERLINKS ==================== -->
+    <h2 id="hyperlinks">2. Hyperlinks</h2>
+
+    <p>Here are the different types of hyperlinks.</p>
+
+    <!-- Internal link -->
+    <p>
+        <a href="#images">
+            Go to Images Section
+        </a>
+    </p>
+
+    <!-- External link -->
+    <p>
+        <a href="https://www.google.com" target="_blank">
+            Visit Google
+        </a>
+    </p>
+
+    <!-- Email link -->
+    <p>
+        <a href="mailto:YOUR-REAL-EMAIL@gmail.com">
+            Send Me an Email
+        </a>
+    </p>
+
+    <!-- Same-page anchor -->
+    <p>
+        <a href="#multimedia">
+            Go to Multimedia Section
+        </a>
+    </p>
+
+
+    <!-- ==================== MULTIMEDIA ==================== -->
+    <h2 id="multimedia">3. Multimedia</h2>
+
+    <h3>Audio</h3>
+
+    <audio controls>
+        <source src="media/TADHANA1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video</h3>
+
+    <video controls width="400">
+        <source src="media/SHOCKfunny.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+
+    <!-- ==================== USEFUL TAGS ==================== -->
+    <h2 id="useful-tags">4. Useful Tags</h2>
+
+    <!-- I used the mark tag to highlight important information. -->
+    <p>
+        <mark>HTML is used to create and structure web pages.</mark>
+    </p>
+
+    <!-- I used the abbr tag to show the meaning of an abbreviation. -->
+    <p>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+        is the language used to structure web pages.
+    </p>
+
+    <!-- I used the blockquote tag to display a quotation separately. -->
+    <blockquote>
+        Learning HTML is an important step in learning web development.
+    </blockquote>
+
+
+    <!-- ==================== HTML DOM ==================== -->
+    <h2 id="dom">5. HTML DOM</h2>
+
+    <div id="dom-content">
+
+        <div id="dom-text">
+
+            <p id="dom-paragraph">
+                The HTML DOM represents a web page as a tree structure.
+                Each element can have a parent and child element.
+            </p>
+
+            <p>
+                I used IDs on several elements so they can be easily
+                identified in the DOM tree.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!--
+    The body element is the parent of the main elements on this page.
+    The div with the id dom-content is a child of the body element.
+    The div with the id dom-text is a child of the dom-content div.
+    The paragraph with the id dom-paragraph is a child of the dom-text div.
+    This shows how HTML elements can have parent and child relationships.
+    -->
+
+
+    <!-- Copyright -->
+    <p>&copy; 2026 HTML Practical Application Activity</p>
+
+</body>
+</html>
