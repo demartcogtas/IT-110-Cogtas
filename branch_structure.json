@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "cogtas-demart-act-2",
+    "first_html_code",
+    "main"
+  ],
+  "parent": {
+    "cogtas-demart-act-2": "main",
+    "first_html_code": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "cogtas-demart-act-2",
+    "first_html_code"
+  ]
+}
